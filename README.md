@@ -14,14 +14,13 @@ What neither of them do is Bindables or Signals, which I wanted to include in mi
 
 # The plugin
 
-**[plugin link]**
+https://create.roblox.com/store/asset/111624145776068/Remote-Inspector
 
-[image]
+<img width="908" height="397" alt="image" src="https://github.com/user-attachments/assets/50df80af-47de-422a-bf8c-2c04a872a12a" />
 
 ---
 
-
-[details="How to use"]
+# How to use
 Install it and open **Remote Traffic** from the Plugins tab, then press Play. It will begin logging on its own.
 
 There are three views you switch between, and this is done via the drop down in the top bar.
@@ -35,13 +34,11 @@ There are three views you switch between, and this is done via the drop down in 
 You can click on any row to open up an expanded view and view the full arguments. Buffers will just get a hex dump. You can right click a row to ignore that remote's calls, select it in explorer. or copy the path.
 
 For signals, there is a TextBox in Settings that allows you to point the plugin to a Signal module. It works with class-based Signal implementations, like those built off GoodSignal.
-[/details]
-
 
 ---
 
 
-[details="Warnings"]
+# Warnings
 Not sure how useful this will be, I just thought some things were worth warning a user about.
 
 | Warning | Means |
@@ -53,11 +50,10 @@ Not sure how useful this will be, I just thought some things were worth warning 
 | NaN or infinite number | a broken number made it onto the wire |
 | handler errored | a RemoteFunction handler threw |
 | never fired | it exists, nothing has used it, and it is still callable by anyone |
-[/details]
 
 ---
 
-[details="Things you should know"]
+# Things you should know
 **The byte counts are only estimates.** Roblox doesn't provide an API for this so the sizes are just worked out from the type of argument. Buffers are an exception as buffer.len is exact, but Roblox still compresses those before sending so the real number is lower than what you see. Use this to compare remotes rather than get exact figures.
 
 **RemoteFunctions only work in some cases and I am not happy about it.** While you can set a callback in Luau, you cannot read one. There isn't a way to hook onto whatever your game put there. The only option is to proxy it, this works on specific cases such as when you index the path at the point of calling:
@@ -76,8 +72,6 @@ BuyItem:InvokeServer("sword")
 The plugin loads after the code does, by the time it can swap anything, your references may already be holding the real one. I spent a lot of time researching but I don't think there is a way past this (if I am wrong, PLEASE let me know how to do this). There is a setting to turn RemoteFunction capture off entirely. It costs a round trip per call and breaks InvokeClient, so if those matter leave it off. Never used InvokeClient myself though.
 
 **There is a master switch in Settings.** If you turn it off, nothing gets hooked at all. Your game runs the same as if you didn't have the plugin installed.
-[/details]
-
 
 ---
 
