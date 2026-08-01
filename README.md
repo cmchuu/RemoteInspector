@@ -21,7 +21,7 @@ https://create.roblox.com/store/asset/111624145776068/Remote-Inspector
 ---
 
 # How to use
-Install it and open **Remote Traffic** from the Plugins tab, then press Play. It will begin logging on its own.
+Install it and open **Remote Inspector** from the Plugins tab, then press Play. It will begin logging on its own.
 
 There are three views you switch between, and this is done via the drop down in the top bar.
 
