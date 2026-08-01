@@ -18,6 +18,8 @@ https://create.roblox.com/store/asset/111624145776068/Remote-Inspector
 
 <img width="908" height="397" alt="image" src="https://github.com/user-attachments/assets/50df80af-47de-422a-bf8c-2c04a872a12a" />
 
+It requests script editing as this is what allows for Signal support, it will create a script and set it's source to get a hold of the actual Signal module, I was having trouble doing this directly from within the plugin.
+
 ---
 
 # How to use
